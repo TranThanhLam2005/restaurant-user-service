@@ -23,9 +23,8 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotBlank(message = "Fullname is required")
     @Size(max = 50, message = "Fullname must be at most 50 characters")
-    @Column(name = "fullname", nullable = false, length = 50)
+    @Column(name = "fullname", nullable = true, length = 50)
     private String fullname;
 
     @NotBlank(message = "Email is required")

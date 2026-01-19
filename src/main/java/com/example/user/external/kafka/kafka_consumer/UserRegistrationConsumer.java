@@ -35,7 +35,7 @@ public class UserRegistrationConsumer {
             // Create and save new user
             User user = User.builder()
                     .email(event.getEmail())
-                    .fullname(event.getFullname() != null ? event.getFullname() : event.getEmail())
+                    .fullname(event.getFullname())
                     .phoneNumber(event.getPhoneNumber())
                     .isActive(true)
                     .build();
